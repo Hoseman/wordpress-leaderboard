@@ -1,0 +1,102 @@
+.weekly-results {
+    & .display-flex {
+        flex-wrap: wrap;
+        margin-bottom: 7rem;
+        margin-top: 7rem;
+    }
+    & .weekly-results__col {
+        width:49%;
+        margin-left:0.5%;
+        margin-right:0.5%;
+        margin-bottom:2rem;
+        display: flex;
+    }
+    @include mediaquery("tablet-767"){
+        & .weekly-results__col {
+            width:100%;
+            margin-left:0%;
+            margin-right:0%;
+            margin-bottom:2rem;
+            display: flex;
+        }
+    }
+    & .weekly-results__card {
+        background: $white;
+        padding: 1.3rem;
+        box-shadow: 0px 0px 15px rgb(0 0 0 / 20%);
+        width: 100%;
+        & .weekly-results__subheader {
+            font-size:2.9rem;
+            margin-left: 1.3rem;
+        }
+        & .weekly-results__header {
+            font-size:4.9rem;
+            margin-top: 0.5rem;
+        }
+        & .weekly-results__dates {
+            font-size:2.1rem;
+            margin-top:0.8rem;
+        }
+    }
+    & .weeks-table {
+        font-size: 1.5rem;
+        line-height:1.8rem;
+        margin:1rem 0 0 0;
+        & th {
+            background:$green;
+            color:$white;
+            padding:0.5rem 0.7rem;
+            text-align: left;
+        }
+        & td {
+            background:$pale-grey;
+            padding:0.5rem 0.7rem;
+            color:$black;
+            border-bottom: 2px solid $white;
+        }
+        & tr {
+            border-bottom:1px solid $white;
+        }
+    }
+}
+
+.carousel-small {
+    width:100%;
+    height: 650px;
+    & .carousel-small__content {
+        width:100%;
+        top: 18.4rem;
+        position:relative;
+        z-index:1;
+        text-align:center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @include mediaquery("tablet-767"){
+        & .carousel-small__content {
+            top: 37.5%;
+        }
+    }
+    @include mediaquery("phone-480"){
+        & .carousel-small__content {
+            top: 30.5%;
+        }
+    }
+    &__img {
+        position:absolute;
+        width: 100%;
+        height:650px;
+        top: 0;
+        z-index: 0;
+        object-fit: cover;
+    }
+}
+
+@include mediaquery("phone-480"){
+    .carousel-small {
+        height:72vh;
+        & .carousel-small__img {
+            height:72vh;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $black;
+}
+a {
+    text-decoration:none;
+}
+p {
+    font-size: 1.7rem;
+}
+h1 {
+    font-size: 9.9rem;
+}
+h2 {
+    font-size: 5rem;
+}
+#wpadminbar {
+    position:absolute;
+}
+@include mediaquery("phone-480"){
+    h2 {
+        font-size: 3.4rem;
+        line-height: 3.9rem;
+    }
+}
+.container {
+    max-width: 1360px;
+    margin-left:auto;
+    margin-right:auto;
+}
+@include mediaquery("desktop-1700"){
+    .container {
+        max-width: 1200px;
+    }
+}

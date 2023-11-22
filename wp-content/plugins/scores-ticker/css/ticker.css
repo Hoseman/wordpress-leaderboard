@@ -1,0 +1,39 @@
+.ticker {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 2rem 0 2rem;
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position:absolute;
+    left: 0;
+    right: 0;
+}
+.ticker-not-installed {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem 2.2rem 2rem;
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:3rem;
+    position:absolute;
+    left: 20%;
+    right: 20%;
+}
+.ticker-not-installed h3 {
+    color: white;
+    font-weight:normal;
+    font-size:3rem
+}
+.ticker__container {
+    display:block; 
+    font-size:55%;
+    margin-bottom:-1.7rem;
+    margin-top: -1.3rem;
+}
+@media screen and (max-width: 480px) {
+    .ticker__container {
+        font-size:77%;
+    }
+}
